@@ -5,7 +5,13 @@ import { useRef } from "react";
 // NOTE: You can also adjust the variables in the shader for super detailed customization
 
 // Basic Usage
-<div style={{ height: "500px", position: "relative", overflow: "hidden" }}>
+<div
+  style={{
+    height: "500px",
+    position: "relative",
+    overflow: "hidden",
+  }}
+>
   <LaserFlow />
 </div>;
 
@@ -42,7 +48,7 @@ function LaserFlowBoxExample() {
       <LaserFlow
         horizontalBeamOffset={0.1}
         verticalBeamOffset={0.0}
-        color="#FF79C6"
+        color="#BF81FD"
       />
 
       <div
@@ -55,7 +61,7 @@ function LaserFlowBoxExample() {
           height: "60%",
           backgroundColor: "#060010",
           borderRadius: "20px",
-          border: "2px solid #FF79C6",
+          border: "2px solid #BF81FD",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -69,7 +75,7 @@ function LaserFlowBoxExample() {
 
       <img
         ref={revealImgRef}
-        src="/path/to/image.jpg"
+        src="/github_img.png"
         alt="Reveal effect"
         style={{
           position: "absolute",

@@ -1,7 +1,11 @@
+import Header from "./components/Header";
+import LaserFlowBoxExample from "./components/HeroSection";
+
 export default function Home() {
   return (
-  <div>
-    Button
-  </div>  
+    <div className="bg-slate-950">
+    <Header />  
+    <LaserFlowBoxExample/>
+    </div>
   );
 }
