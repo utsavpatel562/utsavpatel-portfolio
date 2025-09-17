@@ -7,8 +7,9 @@ const Header = () => {
       bgColor: "#0D0716",
       textColor: "#fff",
       links: [
-        { label: "Company", ariaLabel: "About Company" },
-        { label: "Careers", ariaLabel: "About Careers" },
+        { label: "About Me", ariaLabel: "About Company" },
+        { label: "My Certifications", ariaLabel: "Certifications" },
+        { label: "View Resume", ariaLabel: "Resume" },
       ],
     },
     {
@@ -16,8 +17,9 @@ const Header = () => {
       bgColor: "#170D27",
       textColor: "#fff",
       links: [
-        { label: "Featured", ariaLabel: "Featured Projects" },
-        { label: "Case Studies", ariaLabel: "Project Case Studies" },
+        { label: "Services", ariaLabel: "Services" },
+        { label: "Featured Projects", ariaLabel: "Featured Projects" },
+        { label: "Upcoming Projects", ariaLabel: "Upcoming Project" },
       ],
     },
     {
@@ -26,8 +28,8 @@ const Header = () => {
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email us" },
-        { label: "Twitter", ariaLabel: "Twitter" },
         { label: "LinkedIn", ariaLabel: "LinkedIn" },
+        { label: "GitHub", ariaLabel: "GitHub" },
       ],
     },
   ];
