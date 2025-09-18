@@ -181,7 +181,7 @@
 .hamburger-line {
   width: 30px;
   height: 2px;
-  background-color: currentColor;
+  background-color: #fff;
   transition:
     transform 0.25s ease,
     opacity 0.2s ease,
@@ -334,4 +334,26 @@
   .nav-card-link {
     font-size: 15px;
   }
+}
+/* glass/frosted header */
+.card-nav {
+  /* use the CSS var set from the component; fallback to a translucent white */
+  background: var(--nav-bg, rgba(28, 27, 27, 0.12));
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255,255,255,0.12);
+  position: relative; /* keeps backdrop working reliably */
+  z-index: 40;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+/* slightly stronger when expanded */
+.card-nav.open {
+  background: var(--nav-bg, rgba(255,255,255,0.16));
+}
+
+/* small polish for dark backgrounds (optional) */
+.card-nav.glass {
+  /* make sure background is not fully opaque */
+  background-clip: padding-box;
 }

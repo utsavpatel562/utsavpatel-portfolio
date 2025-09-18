@@ -1,9 +1,25 @@
 "use client";
 import { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-// use your own icon import if react-icons is not available
 import { GoArrowUpRight } from "react-icons/go";
 import "../app/globals.css";
+
+/* small helper: converts 3- or 6-digit hex to rgba */
+const hexToRgba = (hex, alpha = 0.12) => {
+  if (!hex) return `rgba(255,255,255,${alpha})`;
+  const h = hex.replace("#", "");
+  const full =
+    h.length === 3
+      ? h
+          .split("")
+          .map((c) => c + c)
+          .join("")
+      : h;
+  const r = parseInt(full.substring(0, 2), 16);
+  const g = parseInt(full.substring(2, 4), 16);
+  const b = parseInt(full.substring(4, 6), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
 
 const CardNav = ({
   logo,
@@ -138,16 +154,23 @@ const CardNav = ({
     if (el) cardsRef.current[i] = el;
   };
 
+  /* compute background. if hex, convert to rgba with alpha; otherwise use as-is */
+  const computedBg =
+    typeof baseColor === "string" && baseColor.startsWith("#")
+      ? hexToRgba(baseColor, 0.12)
+      : baseColor || "rgba(255,255,255,0.12)";
+
   return (
     <div className={`card-nav-container ${className}`}>
+      {/* Note: we set a CSS variable --nav-bg so styles can come from CSS */}
       <nav
         ref={navRef}
-        className={`card-nav ${isExpanded ? "open" : ""}`}
-        style={{ backgroundColor: baseColor }}
+        className={`card-nav ${isExpanded ? "open" : ""} glass`}
+        style={{ ["--nav-bg"]: computedBg }}
       >
         <div className="card-nav-top">
           <div
-            className={`hamburger-menu  ${isHamburgerOpen ? "open" : ""} `}
+            className={`hamburger-menu ${isHamburgerOpen ? "open" : ""} `}
             onClick={toggleMenu}
             role="button"
             aria-label={isExpanded ? "Close menu" : "Open menu"}

@@ -14,7 +14,7 @@ const Header = () => {
     },
     {
       label: "Projects",
-      bgColor: "#170D27",
+      bgColor: "#0D0716",
       textColor: "#fff",
       links: [
         { label: "Services", ariaLabel: "Services" },
@@ -24,7 +24,7 @@ const Header = () => {
     },
     {
       label: "Contact",
-      bgColor: "#271E37",
+      bgColor: "#0D0716",
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email us" },
@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <CardNav
-      logo="/logo.png"
+      logo="/logo2.png"
       logoAlt="Company Logo"
       items={items}
       baseColor="#fff"
