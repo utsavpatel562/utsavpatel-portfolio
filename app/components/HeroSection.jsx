@@ -1,8 +1,6 @@
 "use client";
-import GradientText from "@/components/GradientText";
 import LaserFlow from "@/components/LaserFlow";
 import LiquidEther from "@/components/LiquidEther";
-import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 
 // NOTE: You can also adjust the variables in the shader for super detailed customization
@@ -77,11 +75,11 @@ function LaserFlowBoxExample() {
         <LiquidEther />
         <div className="absolute">
           <div className="text-center md:p-0 p-2">
-            <h2 className="md:text-4xl text-3xl font-semibold">
+            <h2 className="md:text-5xl text-3xl font-semibold select-none">
               Hi! I'm <span className="text-violet-300">Utsav</span> - AI
               Enthusiast and Full Stack Developer
             </h2>
-            <h2 className="md:text-xl text-lg text-slate-300 md:mt-2 mt-3 font-light">
+            <h2 className="md:text-2xl text-lg text-slate-300 md:mt-2 mt-3 font-light select-none">
               A Computer Programmer who enjoys turning creative ideas into code.
             </h2>
           </div>
