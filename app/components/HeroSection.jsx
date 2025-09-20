@@ -2,6 +2,8 @@
 import LaserFlow from "@/components/LaserFlow";
 import LiquidEther from "@/components/LiquidEther";
 import { useRef } from "react";
+import { FaArrowRight } from "react-icons/fa";
+import { IoDocumentText } from "react-icons/io5";
 
 // NOTE: You can also adjust the variables in the shader for super detailed customization
 
@@ -82,6 +84,18 @@ function LaserFlowBoxExample() {
             <h2 className="md:text-2xl text-lg text-slate-300 md:mt-2 mt-3 font-light select-none">
               A Computer Programmer who enjoys turning creative ideas into code.
             </h2>
+            <div className="my-5 md:flex md:gap-2 justify-center">
+              <button className="relative cursor-pointer opacity-90 hover:opacity-100 transition-opacity p-[2px] bg-black rounded-[16px] bg-gradient-to-t from-[#8122b0] to-[#dc98fd] active:scale-95">
+                <span className="w-full text-xl h-full flex items-center gap-2 px-8 py-3 bg-[#B931FC] text-white rounded-[14px] bg-gradient-to-t from-[#a62ce2] to-[#c045fc]">
+                  Know More <FaArrowRight className="w-4 h-4" />
+                </span>
+              </button>
+              <button className="relative md:mt-0 mt-2 cursor-pointer opacity-90 hover:opacity-100 transition-opacity p-[2px] bg-black rounded-[16px] bg-gradient-to-t from-[#9e9d9f] to-[#f4dffe] active:scale-95">
+                <span className="w-full text-xl h-full flex items-center gap-2 px-8 py-3 bg-[#d6c7de] text-neutral-700 font-semibold rounded-[14px] bg-gradient-to-t from-[#e8e3eb] to-[#8f8e90]">
+                  View Resume <IoDocumentText className="w-4 h-4" />
+                </span>
+              </button>
+            </div>
           </div>
         </div>
         {/* End of the content here */}
