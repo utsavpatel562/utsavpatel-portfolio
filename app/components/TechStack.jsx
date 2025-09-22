@@ -44,32 +44,34 @@ const imageLogos = [
 
 function TechStack() {
   return (
-    <div className="flex justify-center md:mb-10 select-none">
-      <div
-        style={{
-          height: "auto",
-          position: "relative",
-          width: "95%",
-        }}
-        className="bg-neutral-950 py-5"
-      >
-        <h2 className="text-violet-300 text-center md:my-7 text-3xl my-7 md:text-5xl font-semibold">
-          My Tech Stack
-        </h2>
-        <LogoLoop
-          logos={imageLogos}
-          speed={120}
-          direction="left"
-          logoHeight={58}
-          gap={40}
-          pauseOnHover
-          scaleOnHover
-          fadeOut
-          fadeOutColor="#0000"
-          ariaLabel="Technology partners"
-        />
+    <>
+      <div className="flex justify-center md:mb-10 select-none">
+        <div
+          style={{
+            height: "auto",
+            position: "relative",
+            width: "95%",
+          }}
+          className="bg-neutral-950 py-5"
+        >
+          <h2 className="text-violet-300 text-center md:my-7 text-3xl my-7 md:text-5xl font-semibold">
+            My Tech Stack
+          </h2>
+          <LogoLoop
+            logos={imageLogos}
+            speed={120}
+            direction="left"
+            logoHeight={58}
+            gap={40}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#0000"
+            ariaLabel="Technology partners"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 export default TechStack;
